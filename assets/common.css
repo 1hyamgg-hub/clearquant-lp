@@ -1,6 +1,7 @@
 /*
   ClearQuant LP 共通デザインシステム
-  ①②③すべてのレターページはこのファイルを <link rel="stylesheet" href="../assets/common.css"> で読み込む。
+  すべてのレターページ（見分け方の記事／ClearQuant／ClearQuant Platinum）はこのファイルを
+  <link rel="stylesheet" href="../assets/common.css"> で読み込む。
   ページ固有の装飾はページ内の <style> に最小限だけ追加し、色・余白・基本コンポーネントはここで統一する。
 */
 
@@ -200,6 +201,49 @@ h2.section-title {
 
 .closing-box .closing-label { font-size: 14px; color: var(--ink-soft); margin-bottom: 6px; }
 .closing-box .closing-headline { font-size: 18px; font-weight: 700; margin: 0 0 18px; }
+
+/* ---------- 実測データの表 ---------- */
+
+/* 表そのものは折り返さず、狭い画面では表だけを横スクロールさせる（本文は横スクロールさせない） */
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 0 10px;
+}
+
+table.data-table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 520px;
+  font-size: 14.5px;
+  line-height: 1.7;
+  background: #fff;
+}
+
+table.data-table th,
+table.data-table td {
+  border: 1px solid var(--border-soft);
+  padding: 9px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+table.data-table thead th {
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+table.data-table tbody th {
+  font-weight: 400;
+}
+
+.table-note {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  margin: 0 0 20px;
+}
 
 /* ---------- 投資リスク等の注記 ---------- */
 
